@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace DotNetCore.API
+namespace DOT_NET_CORE_WEBAPI_SQLITE
 {
     public class Program
     {

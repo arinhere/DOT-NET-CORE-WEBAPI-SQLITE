@@ -1,15 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
-using DotNetCore.API.Models;
+using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetCore.API.Data
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Data
 {
     public class AppDataContext : DbContext
     {
         public AppDataContext(DbContextOptions<AppDataContext> options) : base(options){
         }
 
-        public DbSet<Value> Values { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

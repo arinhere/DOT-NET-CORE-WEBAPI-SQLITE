@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DOT_NET_CORE_WEBAPI_SQLITE.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20200413080436_updateUserTable")]
-    partial class updateUserTable
+    [Migration("20200413142441_removeValue")]
+    partial class removeValue
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,20 +39,6 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("DOT_NET_CORE_WEBAPI_SQLITE.Models.Value", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Values");
                 });
 #pragma warning restore 612, 618
         }

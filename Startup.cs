@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DotNetCore.API.Data;
-using DotNetCore.API.repository.auth;
-using DotNetCore.API.repository.user;
+using DOT_NET_CORE_WEBAPI_SQLITE.Data;
+using DOT_NET_CORE_WEBAPI_SQLITE.repository.auth;
+using DOT_NET_CORE_WEBAPI_SQLITE.repository.user;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetCore.API
+namespace DOT_NET_CORE_WEBAPI_SQLITE
 {
     public class Startup
     {

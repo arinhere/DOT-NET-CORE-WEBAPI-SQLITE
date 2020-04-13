@@ -1,9 +1,10 @@
 using System.Threading.Tasks;
-using DotNetCore.API.Data;
-using DotNetCore.API.Models;
+using DOT_NET_CORE_WEBAPI_SQLITE.Data;
+using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
+using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetCore.API.repository.user
+namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.user
 {
     public class UserRepository : IUserRepository
     {
@@ -19,6 +20,18 @@ namespace DotNetCore.API.repository.user
                 return null;
             
             return user;
+        }
+
+        public async Task<User> UpdateUser(updateUserDto user)
+        {
+            User userData = await _data.Users.FirstOrDefaultAsync(x => x.Id == user.id);
+            if(userData == null)
+                return null;
+            
+            userData.Name = user.name;
+            _data.SaveChanges();
+
+            return userData;
         }
     }
 }

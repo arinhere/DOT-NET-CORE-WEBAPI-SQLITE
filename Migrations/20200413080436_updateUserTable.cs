@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DotNetCore.API.Migrations
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Migrations
 {
     public partial class updateUserTable : Migration
     {

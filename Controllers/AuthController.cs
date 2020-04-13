@@ -3,14 +3,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using DotNetCore.API.DTO;
-using DotNetCore.API.Models;
-using DotNetCore.API.repository.auth;
+using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
+using DOT_NET_CORE_WEBAPI_SQLITE.Models;
+using DOT_NET_CORE_WEBAPI_SQLITE.repository.auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetCore.API.Controllers
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

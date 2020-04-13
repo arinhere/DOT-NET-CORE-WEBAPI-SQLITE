@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DotNetCore.API": {
+    "DOT_NET_CORE_WEBAPI_SQLITE": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

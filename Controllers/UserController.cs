@@ -1,9 +1,11 @@
 using System.Threading.Tasks;
-using DotNetCore.API.repository.user;
+using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
+using DOT_NET_CORE_WEBAPI_SQLITE.Models;
+using DOT_NET_CORE_WEBAPI_SQLITE.repository.user;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotNetCore.API.Controllers
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
@@ -26,5 +28,16 @@ namespace DotNetCore.API.Controllers
 
             return Ok(user);
         }
+
+        // Put api/user/update
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateUser(updateUserDto dtoInstance){
+            var user = await _repo.UpdateUser(dtoInstance);
+            if(user == null)
+                return NotFound("Invalid user id provided");
+
+            return Ok(user);
+        }
+
     }
 }

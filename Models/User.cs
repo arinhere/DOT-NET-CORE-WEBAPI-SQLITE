@@ -1,4 +1,4 @@
-namespace DotNetCore.API.Models
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Models
 {
     public class User
     {

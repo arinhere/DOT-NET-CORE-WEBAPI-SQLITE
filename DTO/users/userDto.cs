@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DotNetCore.API.DTO
+namespace DOT_NET_CORE_WEBAPI_SQLITE.DTO.users
 {
     public class userDto
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using DotNetCore.API.Data;
-using DotNetCore.API.Models;
+using DOT_NET_CORE_WEBAPI_SQLITE.Data;
+using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetCore.API.repository.auth
+namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.auth
 {
     public class AuthRepository : IAuthRepository
     {
