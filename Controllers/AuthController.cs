@@ -3,9 +3,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using DotNetCore.API.Data;
 using DotNetCore.API.DTO;
 using DotNetCore.API.Models;
+using DotNetCore.API.repository.auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -32,7 +32,10 @@ namespace DotNetCore.API.Controllers
             if (!await _auth.UserExists(dtoInstance.userName))
                 return BadRequest("User already exists");
 
-            var user = new User { UserName = dtoInstance.userName };
+            var user = new User { 
+                UserName = dtoInstance.userName,
+                Name = dtoInstance.name
+            };
             await _auth.Register(user, dtoInstance.password);
 
             return StatusCode(201);

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using DotNetCore.API.Models;
 
-namespace DotNetCore.API.Data
+namespace DotNetCore.API.repository.auth
 {
     public interface IAuthRepository
     {

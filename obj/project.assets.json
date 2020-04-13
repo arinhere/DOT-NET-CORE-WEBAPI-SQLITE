@@ -4614,11 +4614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj",
+      "projectUniqueName": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj",
       "projectName": "DotNetCore.API",
-      "projectPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj",
+      "projectPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj",
       "packagesPath": "C:\\Users\\aghosh\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\obj\\",
+      "outputPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aghosh\\AppData\\Roaming\\NuGet\\NuGet.Config"

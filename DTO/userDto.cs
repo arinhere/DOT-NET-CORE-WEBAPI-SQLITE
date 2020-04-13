@@ -8,7 +8,8 @@ namespace DotNetCore.API.DTO
         public string userName { get; set; }
 
         [Required]
-        [MaxLength(8)]
         public string password { get; set; }
+
+        public string name { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj": {}
+    "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj": {}
   },
   "projects": {
-    "d:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj": {
+    "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj",
+        "projectUniqueName": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj",
         "projectName": "DotNetCore.API",
-        "projectPath": "d:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\DotNetCore.API.csproj",
+        "projectPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\DotNetCore.API.csproj",
         "packagesPath": "C:\\Users\\aghosh\\.nuget\\packages\\",
-        "outputPath": "d:\\projects\\Reference\\Angular-DotNetCore\\DotNetCore.API\\obj\\",
+        "outputPath": "D:\\projects\\Reference\\Angular-DotNetCore\\DOT-NET-CORE-WEBAPI-SQLITE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aghosh\\AppData\\Roaming\\NuGet\\NuGet.Config"

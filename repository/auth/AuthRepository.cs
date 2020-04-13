@@ -1,9 +1,10 @@
 using System;
 using System.Threading.Tasks;
+using DotNetCore.API.Data;
 using DotNetCore.API.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetCore.API.Data
+namespace DotNetCore.API.repository.auth
 {
     public class AuthRepository : IAuthRepository
     {

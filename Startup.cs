@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DotNetCore.API.Data;
+using DotNetCore.API.repository.auth;
+using DotNetCore.API.repository.user;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,10 +36,14 @@ namespace DotNetCore.API
             // Adding ConnectionString
             services.AddDbContext<AppDataContext>(conn => conn.UseSqlite(Configuration.GetConnectionString("DevConnection")));
             services.AddControllers();
+
             // Add CORS
             services.AddCors();
-            // Register New Controller
+
+            // Register New Controller.
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
             // Add JWT Authentication Service
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(option => {
@@ -45,13 +51,14 @@ namespace DotNetCore.API
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
                             .GetBytes(Configuration.GetSection("Appsettings:TokenSecret").Value)),
-                        ValidateAudience = false,
-                        ValidateIssuer = false
+                        ValidateIssuer = false,
+                        ValidateAudience = false                        
                     };
                 });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // This method gets called by the runtime. 
+        // Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -64,9 +71,10 @@ namespace DotNetCore.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
+            // Must use authentication before authorization. A request must be authenticated
+            // before it can be authorized.
             app.UseAuthentication();
+            app.UseAuthorization();            
 
             // Setting up application request here.
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
