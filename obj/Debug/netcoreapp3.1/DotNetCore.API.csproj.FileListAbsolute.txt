@@ -108,3 +108,8 @@ D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\obj\Debug\ne
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\obj\Debug\netcoreapp3.1\DotNetCore.API.dll
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\obj\Debug\netcoreapp3.1\DotNetCore.API.pdb
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\obj\Debug\netcoreapp3.1\DotNetCore.API.genruntimeconfig.cache
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

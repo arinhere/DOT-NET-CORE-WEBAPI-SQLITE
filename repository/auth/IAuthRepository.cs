@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 
-namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.auth
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Repository.auth
 {
     public interface IAuthRepository
     {

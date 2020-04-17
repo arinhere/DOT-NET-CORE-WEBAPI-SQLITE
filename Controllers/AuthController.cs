@@ -1,11 +1,10 @@
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
 using DOT_NET_CORE_WEBAPI_SQLITE.Models;
-using DOT_NET_CORE_WEBAPI_SQLITE.repository.auth;
+using DOT_NET_CORE_WEBAPI_SQLITE.Repository.auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -27,7 +26,7 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Controllers
 
         // Post api/auth/register
         [HttpPost("register")]
-        public async Task<IActionResult> Register(userDto dtoInstance) // DTO needs to be used, because user will send data as an object from Angular.
+        public async Task<IActionResult> Register(UserRequestDto dtoInstance) // DTO needs to be used, because user will send data as an object from Angular.
         {
             if (!await _auth.UserExists(dtoInstance.userName))
                 return BadRequest("User already exists");
@@ -43,7 +42,7 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Controllers
 
         // Post api/auth/login
         [HttpPost("login")]
-        public async Task<ActionResult> Login(userDto dtoInstance)
+        public async Task<ActionResult> Login(UserRequestDto dtoInstance)
         {
             var userData = await _auth.Login(dtoInstance.userName, dtoInstance.password);
             if (userData == null)

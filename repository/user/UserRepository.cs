@@ -4,7 +4,7 @@ using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
 using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.user
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Repository.user
 {
     public class UserRepository : IUserRepository
     {
@@ -15,14 +15,14 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.user
         }
         public async Task<User> GetUser(int id)
         {
-            User user = await _data.Users.FirstOrDefaultAsync(x => x.Id == id);
+            User user = await _data.Users.Include(p => p.Products).FirstOrDefaultAsync(x => x.Id == id);
             if(user == null)
                 return null;
             
             return user;
         }
 
-        public async Task<User> UpdateUser(updateUserDto user)
+        public async Task<User> UpdateUser(UpdateUserDto user)
         {
             User userData = await _data.Users.FirstOrDefaultAsync(x => x.Id == user.id);
             if(userData == null)

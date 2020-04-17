@@ -4,7 +4,7 @@ using DOT_NET_CORE_WEBAPI_SQLITE.Data;
 using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DOT_NET_CORE_WEBAPI_SQLITE.repository.auth
+namespace DOT_NET_CORE_WEBAPI_SQLITE.Repository.auth
 {
     public class AuthRepository : IAuthRepository
     {

@@ -1,24 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
+using AutoMapper;
 using DOT_NET_CORE_WEBAPI_SQLITE.Data;
-using DOT_NET_CORE_WEBAPI_SQLITE.repository.auth;
-using DOT_NET_CORE_WEBAPI_SQLITE.repository.user;
+using DOT_NET_CORE_WEBAPI_SQLITE.Repository.auth;
+using DOT_NET_CORE_WEBAPI_SQLITE.Repository.product;
+using DOT_NET_CORE_WEBAPI_SQLITE.Repository.user;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace DOT_NET_CORE_WEBAPI_SQLITE
@@ -38,14 +33,21 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE
         {
             // Adding ConnectionString
             services.AddDbContext<AppDataContext>(conn => conn.UseSqlite(Configuration.GetConnectionString("DevConnection")));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(option => { // Serialize output and return json response using AddNewtonSoft Json
+                // This will prevent looping error, which we might get while referencing data to other table.
+                option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            }); 
 
             // Add CORS
             services.AddCors();
 
+            //Register service for Auto Mapper
+            services.AddAutoMapper(typeof(UserRepository).Assembly);
+
             // Register New Controller.
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             // Add JWT Authentication Service
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

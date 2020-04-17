@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DOT_NET_CORE_WEBAPI_SQLITE.DTO.users
 {
-    public class userDto
+    public class UserRequestDto
     {
         [Required]
         public string userName { get; set; }

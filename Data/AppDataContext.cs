@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using DOT_NET_CORE_WEBAPI_SQLITE.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,5 +9,6 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
