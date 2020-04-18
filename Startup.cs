@@ -2,6 +2,7 @@ using System.Net;
 using System.Text;
 using AutoMapper;
 using DOT_NET_CORE_WEBAPI_SQLITE.Data;
+using DOT_NET_CORE_WEBAPI_SQLITE.Helpers;
 using DOT_NET_CORE_WEBAPI_SQLITE.Repository.auth;
 using DOT_NET_CORE_WEBAPI_SQLITE.Repository.product;
 using DOT_NET_CORE_WEBAPI_SQLITE.Repository.user;
@@ -40,6 +41,9 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE
 
             // Add CORS
             services.AddCors();
+
+            // Register Cloudinary Service for Uploading Photos
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
 
             //Register service for Auto Mapper
             services.AddAutoMapper(typeof(UserRepository).Assembly);

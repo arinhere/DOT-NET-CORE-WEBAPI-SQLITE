@@ -113,3 +113,4 @@ D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\ne
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\projects\Reference\Angular-DotNetCore\DOT-NET-CORE-WEBAPI-SQLITE\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll

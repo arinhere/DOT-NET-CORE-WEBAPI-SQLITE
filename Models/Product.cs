@@ -10,6 +10,8 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Models
         public DateTime CreatedOn { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
+        public string CloudinaryId { get; set; }
+        public string CloudinaryUrl { get; set; }
         public User User {get; set;}
         public int UserId {get; set;}
     }
