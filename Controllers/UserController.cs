@@ -21,6 +21,17 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet("list")]
+        public async Task<IActionResult> GetAllUsers(){
+            var users = await _repo.GetAllUsers();
+            if(users == null)
+                return BadRequest();
+
+            return Ok(new{
+                data = users
+            });
+        }
+
         // GET api/user/get/id
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetUser(int id)

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DOT_NET_CORE_WEBAPI_SQLITE.Data;
 using DOT_NET_CORE_WEBAPI_SQLITE.DTO.users;
@@ -12,6 +13,17 @@ namespace DOT_NET_CORE_WEBAPI_SQLITE.Repository.user
         public UserRepository(AppDataContext data)
         {
             _data = data;
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            var users = await _data.Users.FromSqlRaw<User>("sp_getUsers").ToListAsync();
+            // If you want to pass any value use the following
+            // _data.Users.FromSqlRaw<User>("sp_getUsers {0}", Pass_Parameter_Here).ToListAsync()
+            if(users == null)
+                return null;
+            
+            return users;
         }
         public async Task<User> GetUser(int id)
         {
